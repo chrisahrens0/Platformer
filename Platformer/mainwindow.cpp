@@ -13,3 +13,12 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *)
+{
+
+}
+
+void MainWindow::on_CloseWindow_released()
+{
+    this->~MainWindow();
+}

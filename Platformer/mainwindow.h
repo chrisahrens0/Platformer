@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtOpenGL>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,6 +15,12 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    void keyPressEvent(QKeyEvent *);
+
+private slots:
+
+    void on_CloseWindow_released();
 
 private:
     Ui::MainWindow *ui;
